@@ -16,6 +16,9 @@ El modelo utilizado ha sido una red neuronal convolucional.
 
 En cuanto a los datos, se tratan de imágenes a color, extraídas de Kaggle: [Corn or Maize Leaf Disease Dataset](https://www.kaggle.com/datasets/smaranjitghose/corn-or-maize-leaf-disease-dataset)
 
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
 La métrica utilizada ha sido la de sensibilidad (_Recall_), ya que es fundamental que se diagnostiquen como plantas enfermas a aquellas que realmente lo estén, tratando de reducir el error de que no sean diagnosticadas como plantas enfermas.
 
 Entre los modelos trabajados, se ha obtenido el siguiente nivel de sensibilidad:
