@@ -15,3 +15,5 @@ Se propone un modelo de clasificación de imágenes supervisado, de tal modo que
 El modelo utilizado ha sido una red neuronal convolucional.
 
 En cuanto a los datos, se tratan de imágenes a color, extraídas de Kaggle: [Corn or Maize Leaf Disease Dataset](https://www.kaggle.com/datasets/smaranjitghose/corn-or-maize-leaf-disease-dataset)
+
+![Texto alternativo](/utils/comparacion.jpg)
