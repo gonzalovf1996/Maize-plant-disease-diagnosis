@@ -4,7 +4,7 @@ El maíz es la base principal de la alimentación de muchos pueblos del continen
 
 El presente cuaderno explica cómo se ha trabajado un modelo de diagnóstico de enfermedades en la planta del maíz, a partir de un modelo de Machine Learning.
 
-![Texto alternativo](/utils/corn-vs-maize-01-1140x641.jpg)
+![Texto alternativo](/src/utils/corn-vs-maize-01-1140x641.jpg)
 
 Se propone un modelo de clasificación de imágenes supervisado, de tal modo que ante una imagen nueva pueda clasificar correctamente a la planta de maíz según cuatro categorías:
 - Planta enferma: marchitez de Stewart (_blight_)
@@ -23,4 +23,4 @@ La métrica utilizada ha sido la de sensibilidad (_Recall_), ya que es fundament
 
 Entre los modelos trabajados, se ha obtenido el siguiente nivel de sensibilidad:
 
-![Texto alternativo](/utils/comparacion.png)
+![Texto alternativo](/src/utils/comparacion.png)
