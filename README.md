@@ -19,8 +19,23 @@ En cuanto a los datos, se tratan de imágenes a color, extraídas de Kaggle: [Co
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
 
-La métrica utilizada ha sido la de sensibilidad (_Recall_), ya que es fundamental que se diagnostiquen como plantas enfermas a aquellas que realmente lo estén, tratando de reducir el error de que no sean diagnosticadas como plantas enfermas.
+El modelo obtenido presenta los siguientes resultados:
+- Accuracy: 0.913
+- Precision: 0.911
+- __Recall__: 0.913
 
-Entre los modelos trabajados, se ha obtenido el siguiente nivel de sensibilidad:
+Se presta especial atención a la sensibilidad (_Recall_) ya que es la métrica que trata de medir el mayor rendimiento en el diagnostico de enfermedad en la planta cuando realmente está enferma. En este caso, el modelo tiene una sensibilidad del 91,3%.
 
-![Texto alternativo](/src/utils/comparacion.png)
+En cuanto a la matriz de confusión, encontramos ciertas disparidades en la categorización de cada enfermedad:
+
+![Texto alternativo](/src/utils/cm_my_model.png)
+
+Llama la atención dos datos significativos:
+- Solamente el 70% de las plantas con Cercospora zeae-maydis o mancha gris del maíz (_gray leaf spot_) han sido categorizadas correctamente.
+- El 100% de las plantas sin las enfermedades correspondientes han sido identificadas correctamente.
+
+Esto quiere decir que el modelo sabe identificar perfectamente cuando una planta está enferma y cuando no, y que tiene un alto margen de error (del 30%) a la hora de clasificar a las plantas con la mancha gris del maíz (_gray leaf spot_). Este alto margen de error  coincide con que es la categoría de las que menos imágenes se dispone, tal y como podemos ver a continuación:
+
+![Texto alternativo](/src/utils/number_images.png)
+
+Por tanto, se propone que una mayor cantidad de imágenes de plantas con la mancha gris del maíz (_gray leaf spot_) en el tamaño muestral podría lograr un modelo de un rendimiento excepcional.
