@@ -38,4 +38,4 @@ Esto quiere decir que el modelo sabe identificar perfectamente cuando una planta
 
 ![Texto alternativo](/src/utils/number_images.png)
 
-Por tanto, se propone que una mayor cantidad de imágenes de plantas con la mancha gris del maíz (_gray leaf spot_) en el tamaño muestral podría lograr un modelo de un rendimiento excepcional.
+En conclusión, el entrenamiento del modelo actual (_"my_model"_) ante una mayor cantidad de imágenes de plantas con la mancha gris del maíz (_gray leaf spot_) en el tamaño muestral podría minimizar el error de predicción existente de forma significativa.
