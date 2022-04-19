@@ -40,3 +40,5 @@ Esto quiere decir que el modelo sabe identificar perfectamente cuando una planta
 
 ----------------------------------------------------------------------------------------------
 En conclusión, el entrenamiento del modelo actual (_"my_model"_) ante una mayor cantidad de imágenes de plantas con la mancha gris del maíz (_gray leaf spot_) en el tamaño muestral podría minimizar el error de predicción existente de forma significativa.
+
+#Keras #CNN #ImageData #TensorFlow
