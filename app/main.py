@@ -42,7 +42,7 @@ if st.sidebar.button('Diagnóstico'):
     if imageselect == 'Subir foto':
         st.write('Para un diagnóstico más adecuado se aconseja tomar más de una foto a la planta en cuestión \
                 y diagnosticar cada foto tomada. Así, se obtendrán resultados más robustos.')
-        img_file_buffer  = st.file_uploader("Sube una foto de tu planta de maíz", type=["png","jpg","jpeg"])
+        fileUpload  = st.file_uploader("Sube una foto de tu planta de maíz", type=["png","jpg","jpeg"])
         file = fileUpload.read()
         bytesImg = io.BytesIO(file)
         img_file_buffer = Image.open(bytesImg)
