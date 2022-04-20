@@ -126,11 +126,10 @@ if st.sidebar.button('Diagnóstico'):
 else: 
     st.write('Escoja una opción de la barra lateral. Verá la imagen escogida o tendrá la opción de subir una foto.')
     st.write('Cuando esté preparado, solicite un diagnóstico')
-    st.image('app/imagenes/Plant-disease-classifier-with-ai-blog-banner.jpg', caption='¡Diagnostiquemos la salud de su planta de maíz!')
     # st.subheader('¿Se puede evitar una mala cosecha?')
-    # st.write('En muchas ocasiones, las malas cosechas están producidas por la propagación de una \
-    #     enfermedad entre nuestros cultivos. Identifiquemos la enfermedad que tiene nuestro maíz a tiempo, y adelantémonos \
-    #     a posibles contagios.')
+#     st.write('En muchas ocasiones, las malas cosechas están producidas por la propagación de una \
+#         enfermedad entre nuestros cultivos. Identifiquemos la enfermedad que tiene nuestro maíz a tiempo, y adelantémonos \
+#         a posibles contagios.')
 
 
 
