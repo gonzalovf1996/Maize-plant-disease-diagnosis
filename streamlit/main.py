@@ -10,10 +10,10 @@ from PIL import Image
 # -----------------------------------------------------------------------------------------------
 st.set_page_config(page_title='Diagnóstico móvil', layout='wide', page_icon='chart_with_upwards_trend')
 
-# st.sidebar.title("Predice con imágenes de muestra, o sube una foto")
+st.sidebar.title("Predice con imágenes de muestra, o sube una foto")
 
-# opciones= ['Subir foto', 'Planta de Estados Unidos', 'Planta de Guatemala', 'Planta de México', 'Planta de Puerto Rico']
-# imageselect = st.sidebar.selectbox("Escoge una imagen", opciones)
+opciones= ['Subir foto', 'Planta de Estados Unidos', 'Planta de Guatemala', 'Planta de México', 'Planta de Puerto Rico']
+imageselect = st.sidebar.selectbox("Escoge una imagen", opciones)
 
 # PÁGINA PRINCIPAL ------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------
@@ -150,8 +150,8 @@ if barra_hor:
 
     st.write('Matriz de confusión ante datos nuevos:')
 
-#     image6 = Image.open('imagenes\cm_my_model.png')
-#     st.image(image6)
+    image6 = Image.open('streamlit/imagenes/cm_my_model.png')
+    st.image(image6)
 
     st.write('Resultados obtenidos ante datos nuevos:')
     st.write('Accuracy: 91,3%')
