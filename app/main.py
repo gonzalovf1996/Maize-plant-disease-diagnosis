@@ -4,6 +4,7 @@
 from functions import preparacion, prediccion, comentarios, probabilidades
 import streamlit as st
 from PIL import Image
+import io
 
 
 # CONFIGURACIÓN DE LA PÁGINA --------------------------------------------------------------------
@@ -42,6 +43,9 @@ if st.sidebar.button('Diagnóstico'):
         st.write('Para un diagnóstico más adecuado se aconseja tomar más de una foto a la planta en cuestión \
                 y diagnosticar cada foto tomada. Así, se obtendrán resultados más robustos.')
         img_file_buffer  = st.file_uploader("Sube una foto de tu planta de maíz", type=["png","jpg","jpeg"])
+        file = fileUpload.read()
+        bytesImg = io.BytesIO(file)
+        img_file_buffer = Image.open(bytesImg)
             
         if img_file_buffer is not None:
             st.write('Foto subida con éxito.')
