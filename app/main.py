@@ -41,13 +41,15 @@ if st.sidebar.button('Diagnóstico'):
     if imageselect == 'Subir foto':
         st.write('Para un diagnóstico más adecuado se aconseja tomar más de una foto a la planta en cuestión \
                 y diagnosticar cada foto tomada. Así, se obtendrán resultados más robustos.')
-        image_file  = st.file_uploader("Sube una foto de tu planta de maíz", type=["png","jpg","jpeg"])
+        img_file_buffer  = st.file_uploader("Sube una foto de tu planta de maíz", type=["png","jpg","jpeg"])
             
         if image_file is not None:
             st.write('Foto subida con éxito.')
             # To View Uploaded Image
+            image_file = Image.open(img_file_buffer)
+            img_array = np.array(image_file) # if you want to pass it to OpenCV
             st.image(image_file, width=400)
-            image_path = preparacion(image_file)
+            image_file = preparacion(image_file)
             diagnostico, my_model = prediccion(image_file)
             st.write('Diagnóstico: ', diagnostico)
 
