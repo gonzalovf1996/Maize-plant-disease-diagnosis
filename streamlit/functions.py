@@ -39,7 +39,7 @@ def prediccion(imagen):
     ---------------------------------------------------------------------------------------------
     '''
     # Ejecutamos el diagnóstico
-    my_model = keras.models.load_model('../src/model/my_model') # cargamos el modelo
+    my_model = keras.models.load_model('..\src\model\my_model') # cargamos el modelo
     prediction = np.argmax(my_model.predict(imagen), axis=1) # obtenemos la predicción 
 
     # Los resultados serán numéricos, y debemos pasarlo a categóricos acorde a:
