@@ -1,3 +1,14 @@
+seaborn==0.11.1
+matplotlib==3.3.4
+tabula_py==2.3.0
+pandas==1.2.3
+numpy==1.19.5
+streamlit==0.86.0
+camelot-py[base]
+Pillow==8.3.2
+tabula-py
+opencv-python-headless
+
 absl-py==1.0.0
 altair==4.2.0
 appdirs==1.4.4
