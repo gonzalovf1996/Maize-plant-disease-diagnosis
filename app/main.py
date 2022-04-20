@@ -3,7 +3,7 @@
 # -----------------------------------------------------------------------------------------------
 from functions import preparacion, prediccion, comentarios, probabilidades
 import streamlit as st
-from PIL Import Image
+from PIL import Image
 
 
 # CONFIGURACIÓN DE LA PÁGINA --------------------------------------------------------------------
