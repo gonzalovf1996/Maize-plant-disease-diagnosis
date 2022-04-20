@@ -40,20 +40,9 @@ if st.sidebar.button('Diagnóstico'):
     if imageselect == 'Subir foto':
         st.write('Para un diagnóstico más adecuado se aconseja tomar más de una foto a la planta en cuestión \
                 y diagnosticar cada foto tomada. Así, se obtendrán resultados más robustos.')
-#         image_file  = st.file_uploader("Sube una foto de tu planta de maíz enferma", type=["png","jpg","jpeg"])
-        image_file  = st.file_uploader("Sube una foto de tu planta de maíz enferma")
+        image_file  = st.file_uploader("Sube una foto de tu planta de maíz", type=["png","jpg","jpeg"])
 
         if image_file  is not None:
-            
-            # check image format
-            image_path = 'app/imagenes/' + image_file.name
-            if ('.jpg' not in image_path) and ('.JPG' not in image_path) and ('.jpeg' not in image_path) and ('.bmp' not in image_path):
-                st.error('Por favor, sube un fichero .jpeg, .jpg or .bmp.')
-            else:
-                # save image to folder
-                with open(image_path, "wb") as f:
-                    f.write(pet_image.getbuffer())
-
             # display pet image
             st.success('Foto subida con éxito.')
             # To View Uploaded Image
