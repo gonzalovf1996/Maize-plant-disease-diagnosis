@@ -20,7 +20,7 @@ imageselect = st.sidebar.selectbox("Escoge una imagen", opciones)
 st.header('Diagnóstico de la salud de la planta de maíz')
 st.write('Elaborado por Gonzalo Villalón Fornés')
 
-image = Image.open('imagenes/dataset-cover.jpg')
+image = Image.open('imagenes\dataset-cover.jpg')
 st.image(image, caption='Detectar una enfermedad en la cosecha a tiempo es crucial para \
     procurar una plantación de maíz que crezca sana y fuerte')
 
@@ -62,7 +62,7 @@ if st.sidebar.button('Diagnóstico'):
             st.write('No dude en insertar una imágen en uno de los siguientes formatos: png, jpg, jpeg.')
 
     elif imageselect == 'Planta de Estados Unidos':
-        image_file1  = 'imagenes/1.jpg'
+        image_file1  = 'imagenes\1.jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
         st.image(image_file1, width=400)
@@ -77,7 +77,7 @@ if st.sidebar.button('Diagnóstico'):
         comentarios(my_model, image_file1)
 
     elif imageselect == 'Planta de Guatemala':
-        image_file2  = 'imagenes/2.jpg'
+        image_file2  = 'imagenes\2.jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
         st.image(image_file2, width=400)
@@ -92,7 +92,7 @@ if st.sidebar.button('Diagnóstico'):
         comentarios(my_model, image_file2)
 
     elif imageselect == 'Planta de México':
-        image_file3  = 'imagenes/3.jpg'
+        image_file3  = 'imagenes\3.jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
         st.image(image_file3, width=400)
@@ -107,7 +107,7 @@ if st.sidebar.button('Diagnóstico'):
         comentarios(my_model, image_file3)
 
     elif imageselect == 'Planta de Puerto Rico':
-        image_file4  = 'imagenes/4.jpg'
+        image_file4  = 'imagenes\4.jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
         st.image(image_file4, width=400)
@@ -129,7 +129,7 @@ else:
     st.write('Escoja una opción de la barra lateral. Verá la imagen escogida o tendrá la opción de subir una foto.')
     st.write('Cuando esté preparado, solicite un diagnóstico')
     
-    image5 = Image.open('imagenes/Plant-disease-classifier-with-ai-blog-banner.jpg')
+    image5 = Image.open('imagenes\Plant-disease-classifier-with-ai-blog-banner.jpg')
     st.image(image5, caption='¡Diagnostiquemos la salud de su planta de maíz!')
     # st.subheader('¿Se puede evitar una mala cosecha?')
     # st.write('En muchas ocasiones, las malas cosechas están producidas por la propagación de una \
@@ -150,7 +150,7 @@ if barra_hor:
 
     st.write('Matriz de confusión ante datos nuevos:')
 
-    image6 = Image.open('imagenes/cm_my_model.png')
+    image6 = Image.open('imagenes\cm_my_model.png')
     st.image(image6)
 
     st.write('Resultados obtenidos ante datos nuevos:')
