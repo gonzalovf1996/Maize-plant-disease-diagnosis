@@ -1,7 +1,7 @@
 
 # LIBRERÍAS Y FUNCIONES -------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------
-from streamlit.functions import preparacion, prediccion, comentarios, probabilidades
+from functions import preparacion, prediccion, comentarios, probabilidades
 import streamlit as st
 from PIL import Image
 
