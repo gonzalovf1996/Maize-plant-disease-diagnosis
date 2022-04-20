@@ -65,7 +65,7 @@ if st.sidebar.button('Diagnóstico'):
         image_file1  = 'imagenes\1.jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
-        st.image(image_file1, width=400)
+#         st.image(image_file1, width=400)
         image_file1 = preparacion(image_file1)
         diagnostico, my_model = prediccion(image_file1)
         st.write('Diagnóstico: ', diagnostico)
@@ -80,7 +80,7 @@ if st.sidebar.button('Diagnóstico'):
         image_file2  = 'imagenes\2.jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
-        st.image(image_file2, width=400)
+#         st.image(image_file2, width=400)
         image_file2 = preparacion(image_file2)
         diagnostico, my_model = prediccion(image_file2)
         st.write('Diagnóstico: ', diagnostico)
@@ -95,7 +95,7 @@ if st.sidebar.button('Diagnóstico'):
         image_file3  = 'imagenes\3.jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
-        st.image(image_file3, width=400)
+#         st.image(image_file3, width=400)
         image_file3 = preparacion(image_file3)
         diagnostico, my_model = prediccion(image_file3)
         st.write('Diagnóstico: ', diagnostico)
@@ -110,7 +110,7 @@ if st.sidebar.button('Diagnóstico'):
         image_file4  = 'imagenes\4.jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
-        st.image(image_file4, width=400)
+#         st.image(image_file4, width=400)
         image_file4 = preparacion(image_file4)
         diagnostico, my_model = prediccion(image_file4)
         st.write('Diagnóstico: ', diagnostico)
@@ -129,8 +129,8 @@ else:
     st.write('Escoja una opción de la barra lateral. Verá la imagen escogida o tendrá la opción de subir una foto.')
     st.write('Cuando esté preparado, solicite un diagnóstico')
     
-    image5 = Image.open('imagenes\Plant-disease-classifier-with-ai-blog-banner.jpg')
-    st.image(image5, caption='¡Diagnostiquemos la salud de su planta de maíz!')
+#     image5 = Image.open('imagenes\Plant-disease-classifier-with-ai-blog-banner.jpg')
+#     st.image(image5, caption='¡Diagnostiquemos la salud de su planta de maíz!')
     # st.subheader('¿Se puede evitar una mala cosecha?')
     # st.write('En muchas ocasiones, las malas cosechas están producidas por la propagación de una \
     #     enfermedad entre nuestros cultivos. Identifiquemos la enfermedad que tiene nuestro maíz a tiempo, y adelantémonos \
