@@ -46,7 +46,7 @@ if st.sidebar.button('Diagnóstico'):
         if image_file  is not None:
             
             # check image format
-            image_path = 'app/imagenes' + image_file.name
+            image_path = 'app/imagenes/' + image_file.name
             if ('.jpg' not in image_path) and ('.JPG' not in image_path) and ('.jpeg' not in image_path) and ('.bmp' not in image_path):
                 st.error('Por favor, sube un fichero .jpeg, .jpg or .bmp.')
             else:
