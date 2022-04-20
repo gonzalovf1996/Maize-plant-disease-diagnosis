@@ -70,7 +70,7 @@ if st.sidebar.button('Diagnóstico'):
             comentarios(my_model, image_path)
             
         else:
-            st.error('No dude en insertar una imágen.')
+            st.error('No dude en insertar una imágen de su planta de maíz 🌾')
 
     elif imageselect == 'Planta de Estados Unidos':
         image_file  = 'app/imagenes/1.jpg'
