@@ -40,24 +40,37 @@ if st.sidebar.button('Diagnóstico'):
     if imageselect == 'Subir foto':
         st.write('Para un diagnóstico más adecuado se aconseja tomar más de una foto a la planta en cuestión \
                 y diagnosticar cada foto tomada. Así, se obtendrán resultados más robustos.')
-        image_file  = st.file_uploader("Sube una foto de tu planta de maíz enferma", type=["png","jpg","jpeg"])
+#         image_file  = st.file_uploader("Sube una foto de tu planta de maíz enferma", type=["png","jpg","jpeg"])
+        image_file  = st.file_uploader("Sube una foto de tu planta de maíz enferma")
 
         if image_file  is not None:
+            
+            # check image format
+            image_path = 'app/imagenes' + image_file.name
+            if ('.jpg' not in image_path) and ('.JPG' not in image_path) and ('.jpeg' not in image_path) and ('.bmp' not in image_path):
+                st.error('Por favor, sube un fichero .jpeg, .jpg or .bmp.')
+            else:
+                # save image to folder
+                with open(image_path, "wb") as f:
+                    f.write(pet_image.getbuffer())
+
+            # display pet image
+            st.success('Foto subida con éxito.')
             # To View Uploaded Image
             st.write('Diagnóstico ejecutado para esta imagen:')
-            st.image(image_file, width=400)
-            image_file = preparacion(image_file)
-            diagnostico, my_model = prediccion(image_file)
+            st.image(image_path, width=400)
+            image_path = preparacion(image_path)
+            diagnostico, my_model = prediccion(image_path)
             st.write('Diagnóstico: ', diagnostico)
 
             with st.expander('Probabilidad de diagnóstico en esta imagen'):
-                fig = probabilidades(my_model, image_file)
+                fig = probabilidades(my_model, image_path)
                 st.pyplot(fig)
 
-            comentarios(my_model, image_file)
+            comentarios(my_model, image_path)
             
         else:
-            st.write('No dude en insertar una imágen en uno de los siguientes formatos: png, jpg, jpeg.')
+            st.error('No dude en insertar una imágen.')
 
     elif imageselect == 'Planta de Estados Unidos':
         image_file  = 'app/imagenes/1.jpg'
