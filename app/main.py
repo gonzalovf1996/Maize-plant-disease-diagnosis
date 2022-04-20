@@ -42,11 +42,12 @@ if st.sidebar.button('Diagnóstico'):
                 y diagnosticar cada foto tomada. Así, se obtendrán resultados más robustos.')
         image_file  = st.file_uploader("Sube una foto de tu planta de maíz", type=["png","jpg","jpeg"])
 
-        if image_file  is not None:
-            # display pet image
+        if image_file  is None:
+            st.error('No dude en insertar una imágen de su planta de maíz 🌾')
+            
+        else:
             st.write('Foto subida con éxito.')
             # To View Uploaded Image
-            st.write('Diagnóstico ejecutado para esta imagen:')
             st.image(image_path, width=400)
             image_path = preparacion(image_path)
             diagnostico, my_model = prediccion(image_path)
@@ -58,8 +59,6 @@ if st.sidebar.button('Diagnóstico'):
 
             comentarios(my_model, image_path)
             
-        else:
-            st.error('No dude en insertar una imágen de su planta de maíz 🌾')
 
     elif imageselect == 'Planta de Estados Unidos':
         image_file  = 'app/imagenes/1.jpg'
