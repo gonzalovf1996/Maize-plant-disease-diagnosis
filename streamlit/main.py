@@ -3,6 +3,7 @@
 # -----------------------------------------------------------------------------------------------
 from functions import preparacion, prediccion, comentarios, probabilidades
 import streamlit as st
+from PIL import Image
 
 
 # CONFIGURACIÓN DE LA PÁGINA --------------------------------------------------------------------
@@ -19,7 +20,8 @@ imageselect = st.sidebar.selectbox("Escoge una imagen", opciones)
 st.header('Diagnóstico de la salud de la planta de maíz')
 st.write('Elaborado por Gonzalo Villalón Fornés')
 
-st.image('imagenes/dataset-cover.jpg', caption='Detectar una enfermedad en la cosecha a tiempo es crucial para \
+image = Image.open('imagenes/dataset-cover.jpg')
+st.image(image, caption='Detectar una enfermedad en la cosecha a tiempo es crucial para \
     procurar una plantación de maíz que crezca sana y fuerte')
 
 with st.expander('¿Qué enfermedades es capaz de diagnosticar este modelo?'):
@@ -60,64 +62,64 @@ if st.sidebar.button('Diagnóstico'):
             st.write('No dude en insertar una imágen en uno de los siguientes formatos: png, jpg, jpeg.')
 
     elif imageselect == 'Planta de Estados Unidos':
-        image_file  = 'imagenes/1.jpg'
+        image_file1  = 'imagenes/1.jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
-        st.image(image_file, width=400)
-        image_file = preparacion(image_file)
-        diagnostico, my_model = prediccion(image_file)
+        st.image(image_file1, width=400)
+        image_file1 = preparacion(image_file1)
+        diagnostico, my_model = prediccion(image_file1)
         st.write('Diagnóstico: ', diagnostico)
 
         with st.expander('Probabilidad de diagnóstico en esta imagen'):
-            fig = probabilidades(my_model, image_file)
-            st.pyplot(fig)
+            fig1 = probabilidades(my_model, image_file)
+            st.pyplot(fig1)
 
-        comentarios(my_model, image_file)
+        comentarios(my_model, image_file1)
 
     elif imageselect == 'Planta de Guatemala':
-        image_file  = 'imagenes/2.jpg'
+        image_file2  = 'imagenes/2.jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
-        st.image(image_file, width=400)
-        image_file = preparacion(image_file)
-        diagnostico, my_model = prediccion(image_file)
+        st.image(image_file2, width=400)
+        image_file2 = preparacion(image_file2)
+        diagnostico, my_model = prediccion(image_file2)
         st.write('Diagnóstico: ', diagnostico)
         
         with st.expander('Probabilidad de diagnóstico en esta imagen'):
-            fig = probabilidades(my_model, image_file)
-            st.pyplot(fig)
+            fig2 = probabilidades(my_model, image_file2)
+            st.pyplot(fig2)
 
-        comentarios(my_model, image_file)
+        comentarios(my_model, image_file2)
 
     elif imageselect == 'Planta de México':
-        image_file  = 'imagenes/3.jpg'
+        image_file3  = 'imagenes/3.jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
-        st.image(image_file, width=400)
-        image_file = preparacion(image_file)
-        diagnostico, my_model = prediccion(image_file)
+        st.image(image_file3, width=400)
+        image_file3 = preparacion(image_file3)
+        diagnostico, my_model = prediccion(image_file3)
         st.write('Diagnóstico: ', diagnostico)
         
         with st.expander('Probabilidad de diagnóstico en esta imagen'):
-            fig = probabilidades(my_model, image_file)
-            st.pyplot(fig)
+            fig3 = probabilidades(my_model, image_file3)
+            st.pyplot(fig3)
 
-        comentarios(my_model, image_file)
+        comentarios(my_model, image_file3)
 
     elif imageselect == 'Planta de Puerto Rico':
-        image_file  = 'imagenes/4.jpg'
+        image_file4  = 'imagenes/4.jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
-        st.image(image_file, width=400)
-        image_file = preparacion(image_file)
-        diagnostico, my_model = prediccion(image_file)
+        st.image(image_file4, width=400)
+        image_file4 = preparacion(image_file4)
+        diagnostico, my_model = prediccion(image_file4)
         st.write('Diagnóstico: ', diagnostico)
         
         with st.expander('Probabilidad de diagnóstico en esta imagen'):
-            fig = probabilidades(my_model, image_file)
-            st.pyplot(fig)
+            fig4 = probabilidades(my_model, image_file4)
+            st.pyplot(fig4)
 
-        comentarios(my_model, image_file)
+        comentarios(my_model, image_file4)
 
 
 # AUSENCIA DE DIAGNOSTICO -----------------------------------------------------------------------
@@ -126,7 +128,9 @@ if st.sidebar.button('Diagnóstico'):
 else: 
     st.write('Escoja una opción de la barra lateral. Verá la imagen escogida o tendrá la opción de subir una foto.')
     st.write('Cuando esté preparado, solicite un diagnóstico')
-    st.image('imagenes/Plant-disease-classifier-with-ai-blog-banner.jpg', caption='¡Diagnostiquemos la salud de su planta de maíz!')
+    
+    image5 = Image.open('imagenes/Plant-disease-classifier-with-ai-blog-banner.jpg')
+    st.image(image5, caption='¡Diagnostiquemos la salud de su planta de maíz!')
     # st.subheader('¿Se puede evitar una mala cosecha?')
     # st.write('En muchas ocasiones, las malas cosechas están producidas por la propagación de una \
     #     enfermedad entre nuestros cultivos. Identifiquemos la enfermedad que tiene nuestro maíz a tiempo, y adelantémonos \
@@ -146,7 +150,8 @@ if barra_hor:
 
     st.write('Matriz de confusión ante datos nuevos:')
 
-    st.image('imagenes/cm_my_model.png')
+    image6 = Image.open('imagenes/cm_my_model.png')
+    st.image(image6)
 
     st.write('Resultados obtenidos ante datos nuevos:')
     st.write('Accuracy: 91,3%')
