@@ -41,23 +41,21 @@ if st.sidebar.button('Diagnóstico'):
     if imageselect == 'Subir foto':
         st.write('Para un diagnóstico más adecuado se aconseja tomar más de una foto a la planta en cuestión \
                 y diagnosticar cada foto tomada. Así, se obtendrán resultados más robustos.')
-        imagen  = st.file_uploader("Sube una foto de tu planta de maíz", type=["png","jpg","jpeg"])
-        image_file = Image.open(imagen)
-        img_array = np.array(image_file)
+        image_file  = st.file_uploader("Sube una foto de tu planta de maíz", type=["png","jpg","jpeg"])
             
-        if imagen is not None:
+        if image_file is not None:
             st.write('Foto subida con éxito.')
             # To View Uploaded Image
-            st.image(image_path, width=400)
-            image_path = preparacion(image_path)
-            diagnostico, my_model = prediccion(image_path)
+            st.image(image_file, width=400)
+            image_path = preparacion(image_file)
+            diagnostico, my_model = prediccion(image_file)
             st.write('Diagnóstico: ', diagnostico)
 
             with st.expander('Probabilidad de diagnóstico en esta imagen'):
-                fig = probabilidades(my_model, image_path)
+                fig = probabilidades(my_model, image_file)
                 st.pyplot(fig)
 
-            comentarios(my_model, image_path)
+            comentarios(my_model, image_file)
             
             
         else:
