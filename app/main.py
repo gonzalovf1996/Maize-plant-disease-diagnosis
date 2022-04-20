@@ -44,11 +44,8 @@ if st.sidebar.button('Diagnóstico'):
         imagen  = st.file_uploader("Sube una foto de tu planta de maíz", type=["png","jpg","jpeg"])
         image_file = Image.open(imagen)
         img_array = np.array(image_file)
-
-        if imagen  is None:
-            st.error('No dude en insertar una imágen de su planta de maíz 🌾')
             
-        else:
+        if imagen is not None:
             st.write('Foto subida con éxito.')
             # To View Uploaded Image
             st.image(image_path, width=400)
@@ -62,6 +59,9 @@ if st.sidebar.button('Diagnóstico'):
 
             comentarios(my_model, image_path)
             
+            
+        else:
+            st.error('No dude en insertar una imágen de su planta de maíz 🌾')
 
     elif imageselect == 'Planta de Estados Unidos':
         image_file  = 'app/imagenes/1.jpg'
