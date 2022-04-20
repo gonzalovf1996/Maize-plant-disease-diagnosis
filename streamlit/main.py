@@ -19,7 +19,7 @@ imageselect = st.sidebar.selectbox("Escoge una imagen", opciones)
 st.header('Diagnóstico de la salud de la planta de maíz')
 st.write('Elaborado por Gonzalo Villalón Fornés')
 
-st.image('imagenes/dataset-cover.jpg', caption='Detectar una enfermedad en la cosecha a tiempo es crucial para \
+st.image('dataset-cover.jpg', caption='Detectar una enfermedad en la cosecha a tiempo es crucial para \
     procurar una plantación de maíz que crezca sana y fuerte')
 
 with st.expander('¿Qué enfermedades es capaz de diagnosticar este modelo?'):
@@ -60,7 +60,7 @@ if st.sidebar.button('Diagnóstico'):
             st.write('No dude en insertar una imágen en uno de los siguientes formatos: png, jpg, jpeg.')
 
     elif imageselect == 'Planta de Estados Unidos':
-        image_file  = 'imagenes/1.jpg'
+        image_file  = '1.jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
         st.image(image_file, width=400)
@@ -75,7 +75,7 @@ if st.sidebar.button('Diagnóstico'):
         comentarios(my_model, image_file)
 
     elif imageselect == 'Planta de Guatemala':
-        image_file  = 'imagenes/2.jpg'
+        image_file  = '2.jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
         st.image(image_file, width=400)
@@ -90,7 +90,7 @@ if st.sidebar.button('Diagnóstico'):
         comentarios(my_model, image_file)
 
     elif imageselect == 'Planta de México':
-        image_file  = 'imagenes/3.jpg'
+        image_file  = '3.jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
         st.image(image_file, width=400)
@@ -105,7 +105,7 @@ if st.sidebar.button('Diagnóstico'):
         comentarios(my_model, image_file)
 
     elif imageselect == 'Planta de Puerto Rico':
-        image_file  = 'imagenes/4.jpg'
+        image_file  = '4.jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
         st.image(image_file, width=400)
@@ -126,7 +126,7 @@ if st.sidebar.button('Diagnóstico'):
 else: 
     st.write('Escoja una opción de la barra lateral. Verá la imagen escogida o tendrá la opción de subir una foto.')
     st.write('Cuando esté preparado, solicite un diagnóstico')
-    st.image('imagenes/Plant-disease-classifier-with-ai-blog-banner.jpg', caption='¡Diagnostiquemos la salud de su planta de maíz!')
+    st.image('Plant-disease-classifier-with-ai-blog-banner.jpg', caption='¡Diagnostiquemos la salud de su planta de maíz!')
     # st.subheader('¿Se puede evitar una mala cosecha?')
     # st.write('En muchas ocasiones, las malas cosechas están producidas por la propagación de una \
     #     enfermedad entre nuestros cultivos. Identifiquemos la enfermedad que tiene nuestro maíz a tiempo, y adelantémonos \
@@ -146,7 +146,7 @@ if barra_hor:
 
     st.write('Matriz de confusión ante datos nuevos:')
 
-    st.image('imagenes/cm_my_model.png')
+    st.image('cm_my_model.png')
 
     st.write('Resultados obtenidos ante datos nuevos:')
     st.write('Accuracy: 91,3%')
