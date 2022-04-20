@@ -44,7 +44,7 @@ if st.sidebar.button('Diagnóstico'):
 
         if image_file  is not None:
             # display pet image
-            st.success('Foto subida con éxito.')
+            st.write('Foto subida con éxito.')
             # To View Uploaded Image
             st.write('Diagnóstico ejecutado para esta imagen:')
             st.image(image_path, width=400)
