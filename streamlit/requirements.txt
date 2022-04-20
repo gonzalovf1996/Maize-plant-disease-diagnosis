@@ -111,7 +111,6 @@ Pillow==9.0.1
 platformdirs==2.5.1
 plotly==5.6.0
 plumber==1.6
-pmdarima==1.8.5
 prometheus-client==0.13.1
 prompt-toolkit==3.0.26
 protobuf==3.19.4
