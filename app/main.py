@@ -45,7 +45,7 @@ if st.sidebar.button('Diagnóstico'):
         image_file = Image.open(imagen)
         img_array = np.array(image_file)
 
-        if image_file  is None:
+        if imagen  is None:
             st.error('No dude en insertar una imágen de su planta de maíz 🌾')
             
         else:
