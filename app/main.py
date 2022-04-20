@@ -41,6 +41,8 @@ if st.sidebar.button('Diagnóstico'):
         st.write('Para un diagnóstico más adecuado se aconseja tomar más de una foto a la planta en cuestión \
                 y diagnosticar cada foto tomada. Así, se obtendrán resultados más robustos.')
         image_file  = st.file_uploader("Sube una foto de tu planta de maíz", type=["png","jpg","jpeg"])
+        image_file = Image.open(image_file)
+        img_array = np.array(image_file)
 
         if image_file  is None:
             st.error('No dude en insertar una imágen de su planta de maíz 🌾')
