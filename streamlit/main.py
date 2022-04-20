@@ -37,29 +37,29 @@ with st.expander('¿Qué enfermedades es capaz de diagnosticar este modelo?'):
 # DIAGNOSTICO -----------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------
 
-# if st.sidebar.button('Diagnóstico'):
+if st.sidebar.button('Diagnóstico'):
 
-#     if imageselect == 'Subir foto':
-#         st.write('Para un diagnóstico más adecuado se aconseja tomar más de una foto a la planta en cuestión \
-#                 y diagnosticar cada foto tomada. Así, se obtendrán resultados más robustos.')
-#         image_file  = st.file_uploader("Sube una foto de tu planta de maíz enferma", type=["png","jpg","jpeg"])
+    if imageselect == 'Subir foto':
+        st.write('Para un diagnóstico más adecuado se aconseja tomar más de una foto a la planta en cuestión \
+                y diagnosticar cada foto tomada. Así, se obtendrán resultados más robustos.')
+        image_file  = st.file_uploader("Sube una foto de tu planta de maíz enferma", type=["png","jpg","jpeg"])
 
-#         if image_file  is not None:
-#             # To View Uploaded Image
-#             st.write('Diagnóstico ejecutado para esta imagen:')
-#             st.image(image_file, width=400)
-#             image_file = preparacion(image_file)
-#             diagnostico, my_model = prediccion(image_file)
-#             st.write('Diagnóstico: ', diagnostico)
+        if image_file  is not None:
+            # To View Uploaded Image
+            st.write('Diagnóstico ejecutado para esta imagen:')
+            st.image(image_file, width=400)
+            image_file = preparacion(image_file)
+            diagnostico, my_model = prediccion(image_file)
+            st.write('Diagnóstico: ', diagnostico)
 
-#             with st.expander('Probabilidad de diagnóstico en esta imagen'):
-#                 fig = probabilidades(my_model, image_file)
-#                 st.pyplot(fig)
+            with st.expander('Probabilidad de diagnóstico en esta imagen'):
+                fig = probabilidades(my_model, image_file)
+                st.pyplot(fig)
 
-#             comentarios(my_model, image_file)
+            comentarios(my_model, image_file)
             
-#         else:
-#             st.write('No dude en insertar una imágen en uno de los siguientes formatos: png, jpg, jpeg.')
+        else:
+            st.write('No dude en insertar una imágen en uno de los siguientes formatos: png, jpg, jpeg.')
 
 #     elif imageselect == 'Planta de Estados Unidos':
 #         image_file1  = 'imagenes\1.jpg'
