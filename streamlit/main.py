@@ -21,7 +21,7 @@ st.header('Diagnóstico de la salud de la planta de maíz')
 st.write('Elaborado por Gonzalo Villalón Fornés')
 
 image = Image.open('streamlit/imagenes/dataset-cover.jpg')
-st.image('imagenes\dataset-cover.jpg', caption='Detectar una enfermedad en la cosecha a tiempo es crucial para \
+st.image(image, caption='Detectar una enfermedad en la cosecha a tiempo es crucial para \
     procurar una plantación de maíz que crezca sana y fuerte')
 
 with st.expander('¿Qué enfermedades es capaz de diagnosticar este modelo?'):
