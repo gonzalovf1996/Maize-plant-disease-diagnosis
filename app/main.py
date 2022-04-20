@@ -7,7 +7,7 @@ import streamlit as st
 
 # CONFIGURACIÓN DE LA PÁGINA --------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------
-st.set_page_config(page_title='Diagnóstico móvil', layout='wide', page_icon='chart_with_upwards_trend')
+st.set_page_config(page_title='Diagnóstico móvil', layout='wide', page_icon='🧑‍🌾')
 
 st.sidebar.title("Predice con imágenes de muestra, o sube una foto")
 
