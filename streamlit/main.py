@@ -47,7 +47,7 @@ if st.sidebar.button('Diagnóstico'):
         if image_file  is not None:
             # To View Uploaded Image
             st.write('Diagnóstico ejecutado para esta imagen:')
-            st.image(image_file, width=400)
+#             st.image(image_file, width=400)
             image_file = preparacion(image_file)
             diagnostico, my_model = prediccion(image_file)
             st.write('Diagnóstico: ', diagnostico)
@@ -80,7 +80,7 @@ if st.sidebar.button('Diagnóstico'):
         image_file2  = 'imagenes\2.jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
-#         st.image(image_file2, width=400)
+        st.image(image_file2, width=400)
         image_file2 = preparacion(image_file2)
         diagnostico, my_model = prediccion(image_file2)
         st.write('Diagnóstico: ', diagnostico)
