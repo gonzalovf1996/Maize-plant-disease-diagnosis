@@ -1,7 +1,7 @@
 
 # LIBRERÍAS Y FUNCIONES -------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------
-from app.functions import preparacion, prediccion, comentarios, probabilidades
+from functions import preparacion, prediccion, comentarios, probabilidades
 import streamlit as st
 
 
