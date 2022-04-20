@@ -20,9 +20,9 @@ st.set_page_config(page_title='Diagnóstico móvil', layout='wide', page_icon='c
 st.header('Diagnóstico de la salud de la planta de maíz')
 st.write('Elaborado por Gonzalo Villalón Fornés')
 
-image = Image.open('imagenes\dataset-cover.jpg')
-st.image(image, caption='Detectar una enfermedad en la cosecha a tiempo es crucial para \
-    procurar una plantación de maíz que crezca sana y fuerte')
+# image = Image.open('imagenes\dataset-cover.jpg')
+# st.image(image, caption='Detectar una enfermedad en la cosecha a tiempo es crucial para \
+#     procurar una plantación de maíz que crezca sana y fuerte')
 
 with st.expander('¿Qué enfermedades es capaz de diagnosticar este modelo?'):
     st.write('El modelo predecie con altos niveles de precisión entre cuatro categorías:')
@@ -150,8 +150,8 @@ if barra_hor:
 
     st.write('Matriz de confusión ante datos nuevos:')
 
-    image6 = Image.open('imagenes\cm_my_model.png')
-    st.image(image6)
+#     image6 = Image.open('imagenes\cm_my_model.png')
+#     st.image(image6)
 
     st.write('Resultados obtenidos ante datos nuevos:')
     st.write('Accuracy: 91,3%')
