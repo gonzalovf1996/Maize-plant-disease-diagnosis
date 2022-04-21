@@ -36,7 +36,6 @@ with st.expander('¿Qué enfermedades es capaz de diagnosticar este modelo?'):
 
 # DIAGNOSTICO -----------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------
-@st.cache(suppress_st_warning=True)
 if st.sidebar.button('Diagnóstico'):
 
     if imageselect == 'Subir foto':
