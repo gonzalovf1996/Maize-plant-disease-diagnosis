@@ -48,8 +48,8 @@ if fileUpload is not None:
     # To View Uploaded Image
 #     image_file = Image.open(fileUpload)
 #     img_array = np.array(image_file) # if you want to pass it to OpenCV
-    st.image(image_file, width=400)
-    image_file = preparacion(image_file)
+    st.image(fileUpload, width=400)
+    image_file = preparacion(fileUpload)
     diagnostico, my_model = prediccion(image_file)
     st.write('Diagnóstico: ', diagnostico)
 
