@@ -46,8 +46,8 @@ fileUpload  = st.file_uploader("Sube una foto de tu planta de maíz", type=["png
 if fileUpload is not None:
     st.write('Foto subida con éxito.')
     # To View Uploaded Image
-    image_file = Image.open(fileUpload)
-    img_array = np.array(image_file) # if you want to pass it to OpenCV
+#     image_file = Image.open(fileUpload)
+#     img_array = np.array(image_file) # if you want to pass it to OpenCV
     st.image(image_file, width=400)
     image_file = preparacion(image_file)
     diagnostico, my_model = prediccion(image_file)
