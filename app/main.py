@@ -43,9 +43,9 @@ if st.sidebar.button('Diagnóstico'):
         st.write('Para un diagnóstico más adecuado se aconseja tomar más de una foto a la planta en cuestión \
                 y diagnosticar cada foto tomada. Así, se obtendrán resultados más robustos.')
         fileUpload  = st.file_uploader("Sube una foto de tu planta de maíz", type=["png","jpg","jpeg"])
-        st.write(fileUpload.dtype)
             
         if fileUpload is not None:
+            st.write(fileUpload.dtype)
             st.write('Foto subida con éxito.')
             # To View Uploaded Image
 #             image_file = Image.open(fileUpload)
