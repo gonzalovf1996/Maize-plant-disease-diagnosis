@@ -11,9 +11,9 @@ import io
 # -----------------------------------------------------------------------------------------------
 st.set_page_config(page_title='MaizeCare App', layout='wide', page_icon='🌾')
 
-st.sidebar.title("Predice con imágenes de muestra, o sube una foto")
+st.sidebar.title("Predice con imágenes de muestra")
 
-opciones= ['Subir foto', 'Planta de Estados Unidos', 'Planta de Guatemala', 'Planta de México', 'Planta de Puerto Rico']
+opciones= ['Planta de Estados Unidos', 'Planta de Guatemala', 'Planta de México', 'Planta de Puerto Rico']
 imageselect = st.sidebar.selectbox("Escoge una imagen", opciones)
 
 # PÁGINA PRINCIPAL ------------------------------------------------------------------------------
@@ -34,37 +34,38 @@ with st.expander('¿Qué enfermedades es capaz de diagnosticar este modelo?'):
     st.write('Por tanto, Como esta aplicación diagnostica únicamente estas enfermedades, recuerde mantener la alerta e \
             informarse si percibe características anómalas que no se ajustan al diagnóstico de presente modelo.')
 
+    
+# SUBIR IMAGEN-----------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------
+
+st.write('Para un diagnóstico más adecuado se aconseja tomar más de una foto a la planta en cuestión \
+                y diagnosticar cada foto tomada. Así, se obtendrán resultados más robustos.')
+fileUpload  = st.file_uploader("Sube una foto de tu planta de maíz", type=["png","jpg","jpeg"])
+            
+if fileUpload is not None:
+    submit_button_1 = st.form_submit_button(label="Diagnosticar esta imagen")
+    if submit_button_1:
+        st.write('Foto subida con éxito.')
+        # To View Uploaded Image
+        image_file = Image.open(fileUpload)
+        img_array = np.array(image_file) # if you want to pass it to OpenCV
+        st.image(image_file, width=400)
+        image_file = preparacion(image_file)
+        diagnostico, my_model = prediccion(image_file)
+        st.write('Diagnóstico: ', diagnostico)
+
+        with st.expander('Probabilidad de diagnóstico en esta imagen'):
+            fig = probabilidades(my_model, image_file)
+            st.pyplot(fig)
+
+            comentarios(my_model, image_file)
+            
+    else:
+        st.write('No dude en insertar una imágen de su planta de maíz 🌾')
 
 # DIAGNOSTICO -----------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------
 if st.sidebar.button('Diagnóstico'):
-
-    if imageselect == 'Subir foto':
-        st.write('Para un diagnóstico más adecuado se aconseja tomar más de una foto a la planta en cuestión \
-                y diagnosticar cada foto tomada. Así, se obtendrán resultados más robustos.')
-        fileUpload  = st.file_uploader("Sube una foto de tu planta de maíz", type=["png","jpg","jpeg"])
-            
-        if fileUpload is not None:
-            submit_button_1 = st.form_submit_button(label="Diagnosticar esta imagen")
-            if submit_button_1:
-                st.write('Foto subida con éxito.')
-                # To View Uploaded Image
-                image_file = Image.open(fileUpload)
-                img_array = np.array(image_file) # if you want to pass it to OpenCV
-                st.image(image_file, width=400)
-                image_file = preparacion(image_file)
-                diagnostico, my_model = prediccion(image_file)
-                st.write('Diagnóstico: ', diagnostico)
-
-                with st.expander('Probabilidad de diagnóstico en esta imagen'):
-                    fig = probabilidades(my_model, image_file)
-                    st.pyplot(fig)
-
-                comentarios(my_model, image_file)
-            
-            
-        else:
-            st.write('No dude en insertar una imágen de su planta de maíz 🌾')
 
     elif imageselect == 'Planta de Estados Unidos':
         image_file  = 'app/imagenes/Corn_Blight (3).jpg'
