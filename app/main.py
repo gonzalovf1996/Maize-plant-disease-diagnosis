@@ -52,12 +52,13 @@ if fileUpload is not None:
     image_file = preparacion(fileUpload)
     diagnostico, my_model = prediccion(image_file)
     st.write('Diagnóstico: ', diagnostico)
+    comentarios(my_model, image_file)
 
     with st.expander('Probabilidad de diagnóstico en esta imagen'):
         fig = probabilidades(my_model, image_file)
         st.pyplot(fig)
 
-        comentarios(my_model, image_file)
+        
             
 else:
     st.write('No dude en insertar una imágen de su planta de maíz 🌾')
@@ -130,13 +131,13 @@ if st.sidebar.button('Diagnóstico'):
 # AUSENCIA DE DIAGNOSTICO -----------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------
 
-else: 
-    st.write('Escoja una opción de la barra lateral. Verá la imagen escogida o tendrá la opción de subir una foto.')
-    st.write('Cuando esté preparado, solicite un diagnóstico')
-    # st.subheader('¿Se puede evitar una mala cosecha?')
-#     st.write('En muchas ocasiones, las malas cosechas están producidas por la propagación de una \
-#         enfermedad entre nuestros cultivos. Identifiquemos la enfermedad que tiene nuestro maíz a tiempo, y adelantémonos \
-#         a posibles contagios.')
+# else: 
+#     st.write('Escoja una opción de la barra lateral. Verá la imagen escogida o tendrá la opción de subir una foto.')
+#     st.write('Cuando esté preparado, solicite un diagnóstico')
+#     # st.subheader('¿Se puede evitar una mala cosecha?')
+# #     st.write('En muchas ocasiones, las malas cosechas están producidas por la propagación de una \
+# #         enfermedad entre nuestros cultivos. Identifiquemos la enfermedad que tiene nuestro maíz a tiempo, y adelantémonos \
+# #         a posibles contagios.')
 
 
 
