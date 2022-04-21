@@ -19,7 +19,7 @@ imageselect = st.sidebar.selectbox("Escoge una imagen", opciones)
 
 # PÁGINA PRINCIPAL ------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------
-st.header('MaizeCare app')
+st.header('MaizeCare App')
 st.write('Diagnóstico de la salud de la planta de maíz')
 st.write('Elaborado por Gonzalo Villalón Fornés')
 
