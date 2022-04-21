@@ -1,5 +1,9 @@
 # Diagnóstico de enfermedad en la planta de maíz
 
+MaizeCare app 👉Diagnóstico móvil · Streamlit
+
+![image](https://user-images.githubusercontent.com/72160486/164451013-a854996b-73cf-4d53-8220-bd3d7f1fb2da.png)
+
 El maíz es la base principal de la alimentación de muchos pueblos del continente americano desde tiempos ancestrales, tanto es así que los indios tahinos lo llamaron _mahis_, que significa "aquello que sustenta la vida". A día de hoy, continúa siendo un pilar alimentario indispensable, particularmente en áreas rurales de todo el continente. Su buen crecimiento garantiza seguridad alimentaria, mientras que épocas de malas cosechas traen hambrunas. Por ende, diagnosticar a tiempo una enfermedad en su crecimiento puede ser de vital importancia para familias agricultoras. Los avances tecnológicos y el alcance de la tecnología móvil en las áreas más remotas permite el acceso a diagnóstico de enfermedades en la planta del maíz con alto porcentaje de acierto a tan solo un click. 
 
 El presente cuaderno explica cómo se ha trabajado un modelo de diagnóstico de enfermedades en la planta del maíz, a partir de un modelo de Machine Learning.
