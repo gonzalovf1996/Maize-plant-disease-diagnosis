@@ -42,9 +42,6 @@ if st.sidebar.button('Diagnóstico'):
         st.write('Para un diagnóstico más adecuado se aconseja tomar más de una foto a la planta en cuestión \
                 y diagnosticar cada foto tomada. Así, se obtendrán resultados más robustos.')
         fileUpload  = st.file_uploader("Sube una foto de tu planta de maíz", type=["png","jpg","jpeg"])
-        
-        if 'selectbox_sheet' not in st.session_state:       # Initialise variable
-            st.session_state['selectbox_sheet'] = fileUpload
             
         if fileUpload is not None:
             submit_button_1 = st.form_submit_button(label="Diagnosticar esta imagen")
