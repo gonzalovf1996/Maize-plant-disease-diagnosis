@@ -42,10 +42,10 @@ if st.sidebar.button('Diagnóstico'):
     if imageselect == 'Subir foto':
         st.write('Para un diagnóstico más adecuado se aconseja tomar más de una foto a la planta en cuestión \
                 y diagnosticar cada foto tomada. Así, se obtendrán resultados más robustos.')
+        @st.cache(suppress_st_warning=True)
         fileUpload  = st.file_uploader("Sube una foto de tu planta de maíz", type=["png","jpg","jpeg"])
         
         if fileUpload is not None:
-            @st.cache(suppress_st_warning=True)
             submit_button_1 = st.form_submit_button(label="Diagnosticar esta imagen")
             if submit_button_1:
     #             st.write(fileUpload.dtype)
