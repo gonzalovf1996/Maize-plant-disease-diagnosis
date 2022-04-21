@@ -66,7 +66,7 @@ if st.sidebar.button('Diagnóstico'):
             st.write('No dude en insertar una imágen de su planta de maíz 🌾')
 
     elif imageselect == 'Planta de Estados Unidos':
-        image_file  = 'app/imagenes/1.jpg'
+        image_file  = 'app/imagenes/Corn_Blight (3).jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
         st.image(image_file, width=400)
@@ -81,7 +81,7 @@ if st.sidebar.button('Diagnóstico'):
         comentarios(my_model, image_file)
 
     elif imageselect == 'Planta de Guatemala':
-        image_file  = 'app/imagenes/2.jpg'
+        image_file  = 'app/imagenes/Corn_Common_Rust (2).jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
         st.image(image_file, width=400)
@@ -96,7 +96,7 @@ if st.sidebar.button('Diagnóstico'):
         comentarios(my_model, image_file)
 
     elif imageselect == 'Planta de México':
-        image_file  = 'app/imagenes/3.jpg'
+        image_file  = 'app/imagenes/Corn_Gray_Spot (11).jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
         st.image(image_file, width=400)
