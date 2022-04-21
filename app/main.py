@@ -96,7 +96,7 @@ if st.sidebar.button('Diagnóstico'):
         comentarios(my_model, image_file)
 
     elif imageselect == 'Planta de México':
-        image_file  = 'app/imagenes/Corn_Gray_Spot (34).jpg'
+        image_file  = 'app/imagenes/Corn_Gray_Spot (36).jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
         st.image(image_file, width=400)
