@@ -50,15 +50,15 @@ if st.sidebar.button('Diagnóstico'):
             image_file = Image.open(fileUpload)
             img_array = np.array(image_file) # if you want to pass it to OpenCV
             st.image(image_file, width=400)
-            image_file = preparacion(image_file)
-            diagnostico, my_model = prediccion(image_file)
-            st.write('Diagnóstico: ', diagnostico)
+#             image_file = preparacion(image_file)
+#             diagnostico, my_model = prediccion(image_file)
+#             st.write('Diagnóstico: ', diagnostico)
 
-            with st.expander('Probabilidad de diagnóstico en esta imagen'):
-                fig = probabilidades(my_model, image_file)
-                st.pyplot(fig)
+#             with st.expander('Probabilidad de diagnóstico en esta imagen'):
+#                 fig = probabilidades(my_model, image_file)
+#                 st.pyplot(fig)
 
-            comentarios(my_model, image_file)
+#             comentarios(my_model, image_file)
             
             
         else:
