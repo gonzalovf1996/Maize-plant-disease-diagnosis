@@ -58,8 +58,8 @@ if fileUpload is not None:
 
         comentarios(my_model, image_file)
             
-    else:
-        st.write('No dude en insertar una imágen de su planta de maíz 🌾')
+else:
+    st.write('No dude en insertar una imágen de su planta de maíz 🌾')
 
 # DIAGNOSTICO -----------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------
