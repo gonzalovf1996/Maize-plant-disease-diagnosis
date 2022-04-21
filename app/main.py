@@ -43,22 +43,20 @@ st.write('Para un diagnóstico más adecuado se aconseja tomar más de una foto 
 fileUpload  = st.file_uploader("Sube una foto de tu planta de maíz", type=["png","jpg","jpeg"])
             
 if fileUpload is not None:
-    submit_button_1 = st.form_submit_button(label="Diagnosticar esta imagen")
-    if submit_button_1:
-        st.write('Foto subida con éxito.')
-        # To View Uploaded Image
-        image_file = Image.open(fileUpload)
-        img_array = np.array(image_file) # if you want to pass it to OpenCV
-        st.image(image_file, width=400)
-        image_file = preparacion(image_file)
-        diagnostico, my_model = prediccion(image_file)
-        st.write('Diagnóstico: ', diagnostico)
+    st.write('Foto subida con éxito.')
+    # To View Uploaded Image
+    image_file = Image.open(fileUpload)
+    img_array = np.array(image_file) # if you want to pass it to OpenCV
+    st.image(image_file, width=400)
+    image_file = preparacion(image_file)
+    diagnostico, my_model = prediccion(image_file)
+    st.write('Diagnóstico: ', diagnostico)
 
-        with st.expander('Probabilidad de diagnóstico en esta imagen'):
-            fig = probabilidades(my_model, image_file)
-            st.pyplot(fig)
+    with st.expander('Probabilidad de diagnóstico en esta imagen'):
+        fig = probabilidades(my_model, image_file)
+        st.pyplot(fig)
 
-            comentarios(my_model, image_file)
+        comentarios(my_model, image_file)
             
     else:
         st.write('No dude en insertar una imágen de su planta de maíz 🌾')
