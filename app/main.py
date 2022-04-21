@@ -9,7 +9,7 @@ import io
 
 # CONFIGURACIÓN DE LA PÁGINA --------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------
-st.set_page_config(page_title='Diagnóstico móvil', layout='wide', page_icon='🌾')
+st.set_page_config(page_title='MaizeCare App', layout='wide', page_icon='🌾')
 
 st.sidebar.title("Predice con imágenes de muestra, o sube una foto")
 
@@ -18,7 +18,8 @@ imageselect = st.sidebar.selectbox("Escoge una imagen", opciones)
 
 # PÁGINA PRINCIPAL ------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------------
-st.header('Diagnóstico de la salud de la planta de maíz')
+st.header('MaizeCare app')
+st.write('Diagnóstico de la salud de la planta de maíz')
 st.write('Elaborado por Gonzalo Villalón Fornés')
 
 st.image('app/imagenes/dataset-cover.jpg', caption='Detectar una enfermedad en la cosecha a tiempo es crucial para \
