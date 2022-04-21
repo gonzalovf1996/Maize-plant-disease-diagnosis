@@ -67,7 +67,7 @@ if fileUpload is not None:
 # -----------------------------------------------------------------------------------------------
 if st.sidebar.button('Diagnóstico'):
 
-    elif imageselect == 'Planta de Estados Unidos':
+    if imageselect == 'Planta de Estados Unidos':
         image_file  = 'app/imagenes/Corn_Blight (3).jpg'
         # To View Uploaded Image
         st.write('Diagnóstico ejecutado para esta imagen:')
