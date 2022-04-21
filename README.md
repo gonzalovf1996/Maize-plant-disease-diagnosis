@@ -1,15 +1,16 @@
 # Diagnóstico de enfermedad en la planta de maíz
+----------------------------------------------------------------------------------------------
 
 #Keras #CNN #ImageData #TensorFlow
 
-----------------------------------------------------------------------------------------------
 👉 [MaizeCare App · Streamlit](https://share.streamlit.io/gonzalovf1996/maize-plant-disease-diagnosis/main/app/main.py)
-
-![Texto alternativo](/app/imagenes/dataset-cover.jpg)
 
 _El maíz es la base principal de la alimentación de muchos pueblos del continente americano desde tiempos ancestrales, tanto es así que los indios tahinos lo llamaron _mahis_, que significa "aquello que sustenta la vida". A día de hoy, continúa siendo un pilar alimentario indispensable, particularmente en áreas rurales de todo el continente. Su buen crecimiento garantiza seguridad alimentaria, mientras que épocas de malas cosechas traen hambrunas. Por ende, diagnosticar a tiempo una enfermedad en su crecimiento puede ser de vital importancia para familias agricultoras. Los avances tecnológicos y el alcance de la tecnología móvil en las áreas más remotas permite el acceso a diagnóstico de enfermedades en la planta del maíz con alto porcentaje de acierto a tan solo un click._
 
 El presente cuaderno explica cómo se ha trabajado un modelo de diagnóstico de enfermedades en la planta del maíz, a partir de un modelo de Machine Learning.
+
+![Texto alternativo](/app/imagenes/dataset-cover.jpg)
+
 
 Se propone un modelo de clasificación de imágenes supervisado, de tal modo que ante una imagen nueva pueda clasificar correctamente a la planta de maíz según cuatro categorías:
 - Planta enferma: marchitez de Stewart (_blight_)
