@@ -48,7 +48,7 @@ google-auth==2.6.2
 google-auth-oauthlib>=0.5,<1.0
 google-pasta==0.2.0
 graphviz==0.19.1
-grpcio==1.44.0
+grpcio>=1.48.2,<2.0
 h11==0.13.0
 h5py==3.6.0
 imageio==2.16.0
