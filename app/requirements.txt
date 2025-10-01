@@ -90,7 +90,7 @@ networkx==2.6.3
 nii2png==0.2.7
 node==0.9.28
 notebook==6.4.8
-numba==0.55.1
+numba>=0.56,<0.60
 numpy>=1.23,<2.0
 oauthlib==3.2.0
 odict==1.8.0
