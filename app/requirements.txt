@@ -109,7 +109,7 @@ platformdirs==2.5.1
 plotly==5.6.0
 plumber==1.6
 prometheus-client==0.13.1
-prompt-toolkit==3.0.26
+prompt-toolkit>=3.0.41,<3.1.0
 protobuf>=4.24,<5.0
 pyarrow>=10.0.1
 pyasn1==0.4.8
